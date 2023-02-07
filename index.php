@@ -146,11 +146,11 @@ OR $contrasena == 'An5fgC51'
     <link rel="stylesheet" href="styles/libraries/Swiper/swiper.min.css">
     <!-- Estilos del sitio -->
     <link rel="stylesheet" href="./styles/styles.css">
-    <title>Espacio Informativo</title>      
+    <title>Espacio Informativoo</title>      
 </head>
 <body>
     <main>
-        <h2 align="center">ESPACIO INFORMATIVO INTERNO</h2>
+        <h2 align="center">ESPACIO INFORMATIVOo INTERNO</h2>
         <div class="col-md-10 mx-auto col-lg-5">
             <?php echo "<font color=\"#d04a31\"><h4>$mensaje</h4></font>" ?> 
             <form class="p-4 p-md-5 border rounded-3 bg-light" action="" method="post">
