@@ -1,0 +1,148 @@
+/* CSS Document */
+
+
+.inicioSesion {
+    display:flex;
+    flex-direction: column;
+    justify-content:space-around;
+}
+
+.espacioInterno h2{
+    text-align: center;
+    color: #862660;
+    transition: all 500ms ease-out;
+    margin: 20px 100px;
+    padding: 15px;
+}
+
+.inicioSesion h2:hover{
+    background-color: #862660;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 500ms ease-out;
+}
+
+.inicioSesion p {
+    text-decoration: none;
+    color: #1A5BA7;
+    font-size: 25px;
+}
+
+.inicioSesion input {
+    font-size: 18px;
+}
+body .inicioSesion .swiper-espacio{
+    background-color: #D8E4F0;
+}
+
+body .inicioSesion .swiper-espacio .swiper-slide {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(134, 38, 96, 0.8);
+    top: -15px;
+  	height: 100%;
+  	width: 80%;
+    border: none;
+    z-index: 0;
+    padding: 10px 20px;
+    transition: all 500ms ease-out;
+    margin: 20px 10%;
+    flex-direction: column;
+  }
+
+body .inicioSesion .swiper-espacio .swiper-slide3 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: #A0BBD2;
+    top: -15px;
+  	height: 70%;
+  	width: 50%;
+    border: none;
+    z-index: 0;
+    padding: 0px 15px;
+    transition: all 500ms ease-out;
+    margin: 0px 25% 10%;
+    flex-direction: column;
+  }
+
+.btnNovedades a {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 18px;
+	font-style: italic;
+	/*font-weight: bold;*/
+	text-decoration:none;
+	color: #000;
+}
+.btnNovedadesActivo a {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 18px;
+	font-style: italic;
+	text-decoration:none;
+	background-color:#099;
+	color: #FFF !important;
+	padding:0px 5px 0px 5px;
+}
+.botonLibros {
+	width: 100px;
+}
+
+.tituloDeOrganoColegiado{
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	color:#099;
+	font-weight: bold;
+}
+
+.personalAcademico {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-weight:bold !important;
+	color: #231F20 !important;
+	text-decoration: none;
+}
+
+.personalAcademicoSinLiga {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-weight:bold !important;
+	color: #231F20 !important;
+	text-decoration: none;
+}
+
+.personalAcademico:hover{
+
+	color:#C5B02C !important;
+	text-decoration: none !important;
+}
+
+/* LINKS */
+
+a:link {
+		color:#000;
+	text-decoration: none;
+}
+
+a:visited {
+		color:#000;
+	text-decoration: none;
+}
+
+a:hover {
+	color:#14969C;
+	text-decoration: none;
+}
+
+
+.botonesEspacioInformativo {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 18px;
+	text-decoration:none;
+	background-color:#009999;
+	color:#FFF !important;
+	padding:0px 5px 0px 5px;
+
+	
+}
