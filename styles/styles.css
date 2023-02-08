@@ -61,7 +61,7 @@ header .mosaicoCeiich{
     display: flex;
     background-color: #e9e6df;
     
-    /*justify-content: flex-end;*/
+    justify-content: flex-end;
     align-items: center;
     justify-content: left;
     
@@ -74,9 +74,8 @@ header .mosaicoCeiich img{
     height: 390px;
     /*max-height: 200%;*/
     background-color: #e9e6df;
-    
     justify-self:center;
-    padding: 15px;
+
 }
 
 
