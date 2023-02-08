@@ -31,8 +31,8 @@ header {
 header .logoUnam {
     display: flex;
     background-color: #e9e6df;
-    /*flex-grow: 10;*/
-    /*justify-content: right;*/
+    flex-grow: 10;
+    justify-content: right;
     text-align: center;
     padding-top: 10px;
     margin: 2%;
