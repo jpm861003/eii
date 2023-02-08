@@ -16,20 +16,27 @@ body{
 header {
     display: flex;
     flex-direction: row;
-    width: 100%;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    /*width: 100%;*/
+   /* flex-wrap: wrap;*/
     background-color: #e9e6df;
+    padding: 0px;
+    width: 100%;
+    
 }
 
 
 header .logoUnam {
     display: flex;
     background-color: #e9e6df;
-    flex-grow: 10;
-    justify-content: left;
+    /*flex-grow: 10;*/
+    /*justify-content: right;*/
     text-align: center;
-    padding-top: 10px;
-    margin: 2%;
+    background-image: url('/images/grid-nav.png');
+   padding-top: 1px;
+    margin: 1%;
 }
 
 header .logoUnam a{
@@ -41,29 +48,47 @@ header .logoUnam a{
 }
 
 header .logoUnam img{
-    max-width:100px;
+    height: 170px;  
+   
     align-self: center;
+    justify-content: center;
     background-color: #e9e6df;
 }
 
-header .logoCeiich{
+
+/*Mosaico*/
+header .mosaicoCeiich{
     display: flex;
     background-color: #e9e6df;
-    justify-content: flex-end;
+    
+    /*justify-content: flex-end;*/
+    align-items: center;
+    justify-content: left;
+    
+}
    
+
+
+header .mosaicoCeiich img{
+    width:100%;
+height:auto;
+   /* height: 390px;*/
+    /*max-height: 200%;*/
+    background-color: #e9e6df;
+    
+    justify-self:center;
+    padding: 15px;
 }
 
-header .logoCeiich img{
-    max-height: 100%;
-    background-color: #e9e6df;
-    justify-self: flex-end;
-    padding: 5px;
-}
 
-header .logoCeiich a{
-    text-align: right;
-    align-self: center;
-    background-color: #e9e6df;
+
+
+@media screen and (max-width:1000px) {
+    header{
+     flex-direction: column;
+
+    }
+
 }
 
 
@@ -75,14 +100,15 @@ header .logoCeiich a{
     margin: 5px;
 }
 
+/*Centro de inves....*/
 .letter2{
     background-color: #e9e6df;
     text-decoration: none;
     color: #244064;
-    font-size: 18px;
-    margin: 5px;
-    padding: 5%;
-    text-align: left;
+    font-size: 35px;
+    margin: 18px;
+    padding: 1%;
+    text-align: center;
 }
 
 .letter2 a{
