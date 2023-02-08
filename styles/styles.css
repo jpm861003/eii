@@ -19,10 +19,10 @@ header {
     justify-content: space-between;
     align-items: center;
     align-content: center;
-    /*width: 100%;*/
-   /* flex-wrap: wrap;*/
+    width: 100%;
+    flex-wrap: wrap;
     background-color: #e9e6df;
-    padding: 0px;
+    
    
     
 }
