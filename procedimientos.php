@@ -21,7 +21,7 @@ session_start();
          <!-- Swiper IO -->
         <link rel="stylesheet" href="../styles/libraries/Swiper/swiper.min.css">
         <!-- Estilos del sitio -->
-        <link rel="stylesheet" href="../styles/styles.css">
+        <link rel="stylesheet" href="./styles/styles.css">
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
       
@@ -46,7 +46,7 @@ $(document).ready(function () {
         <a href="javascript:subir();"><i class="fas fa-angle-up up" alt="Ir arriba"></i></a>
       </div>
         <div align="center">
-          <img src="../src/images/Banner-espacio-informativo-CEIICH.jpg" width="250" height="115">
+          <img src="./src/images/Banner-espacio-informativo-CEIICH.jpg" width="250" height="115">
         </div>
         <div class="total">
           <p align="right">Por su seguridad, no olvide salir de esta página
