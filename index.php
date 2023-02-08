@@ -150,7 +150,7 @@ OR $contrasena == 'An5fgC51'
 </head>
 <body>
     <main>
-        <h2 align="center">ESPACIOooo INFORMATIVO INTERNO</h2>
+        <h2 align="center">ESPACIO INFORMATIVO INTERNO</h2>
         <div class="col-md-10 mx-auto col-lg-5">
             <?php echo "<font color=\"#d04a31\"><h4>$mensaje</h4></font>" ?> 
             <form class="p-4 p-md-5 border rounded-3 bg-light" action="" method="post">
