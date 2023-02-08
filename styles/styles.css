@@ -70,9 +70,8 @@ header .mosaicoCeiich{
 
 
 header .mosaicoCeiich img{
-    width:100%;
-height:auto;
-   /* height: 390px;*/
+    
+    height: 390px;
     /*max-height: 200%;*/
     background-color: #e9e6df;
     
