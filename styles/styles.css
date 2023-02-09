@@ -18,7 +18,7 @@
       width: 100%;
       height: 260px;
       /*width: 200px;*/
-      flex-wrap: wrap;
+     flex-wrap: wrap;
       background-color: #e9e6df;
       
   }
@@ -29,7 +29,7 @@
       background-color: #e9e6df;
       flex-grow: 10;
       justify-content: center;
-      text-align: center;
+      text-align: left;
       padding-top: 50px;
      
 
@@ -58,10 +58,10 @@
   }
   
   header .mosaicoCeiich img{
-    height: 400px;
+       height: 270px;
       background-color: #e9e6df;
-      justify-self: flex-end;
-      padding: 1px;
+      justify-self: flex-start
+      padding 4px;
   }
   
   header .mosaicoCeiich a{
@@ -71,36 +71,9 @@
   }
   
   
-/* ----------- iPhone X ----------- */
-
-/* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
-
-}
-
-/* Portrait */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: portrait) { 
-
-}
-
-/* Landscape */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: landscape) { 
-
-}
 
 
-@media screen and (max-width:100px) {
+@media screen and (min-width:360px) {
     header{
      flex-direction: row;
 
@@ -122,9 +95,9 @@
     background-color: #e9e6df;
     text-decoration: none;
     color: #244064;
-    font-size: 25px;
+    font-size: 30px;
     margin: 18px;
-    padding: 1%;
+    
     text-align: center;
 }
 
@@ -132,7 +105,14 @@
     background-color: #e9e6df;
     }
 
- 
+ /*ESPACIO INFORMATICO INTERNO*/
+.eii {
+     margin-top: 90px;
+    font-size: 30px;
+
+}
+
+
 .parallax {
     background-image: url("../src/images/mobile.png");
     background-size: auto;
@@ -346,13 +326,14 @@ footer .icons a{
 footer .extern{
     display: flex;
     flex-direction: column;
-    margin-top: 25px;
+    margin-top: 5px;
     background-color: #ebe7df;
     flex-wrap: wrap;
     align-items: center;
     text-align: center;
     justify-content: center;
     padding-bottom: 10px;
+    
 }
 
 footer .extern p{
