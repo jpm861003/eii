@@ -31,11 +31,20 @@ obj.style.display = (obj.style.display == 'block') ? 'none' : 'block';
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
 </head>
 <body>
+  <div class="container-1">
+    <div class="contenedor">
+      <div class="row align-items-center">
+        <div class="col-1">
+         <p>|</p>
+        </div>
+        <div class="col-sm-4">
+          <h1>Docencia</h1>
+        </div>
+      </div>
+    </div>
+  </div>
   <main>
     <section class="inv">
-        <div align="center">
-          <img src="./src/images/Banner-espacio-informativo-CEIICH.jpg" width="250" height="115">
-        </div>
         <div class="total">
           <p align="right">Por su seguridad, no olvide salir de esta página
             <a href="espacioCerrar.php"><i class="fa fa-window-close" aria-hidden="true"></i></a>
@@ -43,34 +52,28 @@ obj.style.display = (obj.style.display == 'block') ? 'none' : 'block';
         </div>
         <div class="total">
           <div class="container text-center">
-            <div class="swiper-espacioInformativo">
-              <section class="organos">
-                <h2>DOCENCIA</h2>
-
-                <table data-order='[[ 3, "asc" ]]' id="example" class="display dataTable">
-                    <thead>
-                      <tr>
-                        <th class="sorting sorting_asc" tabindex="0" aria-controls="example" aria-label="Name: activate to sort column ascending">Nombre</th>
-                        <th>Ver</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr class="odd">
-                        <td>Convenios y Bases de Colaboración de Docencia y Educación Continua</td>
-                        <td><a href="https://www.ceiich.unam.mx/0/docs/formatos/Convenios y Bases de Colaboracion de Docencia y Educacion Continua.docx" target="_blank">Ver</a></td>
-                      </tr>
-                      <tr class="even">
-                        <td>La Educación continua en el CEIICH</td>
-                        <td><a href="https://www.ceiich.unam.mx/0/docs/formatos/La Educacion continua en el CEIICH.docx" target="_blank">Ver</a></td>
-                      </tr>
-                      <tr>
-                        <td>Proceso para inicio y término de servicio social</td>
-                        <td><a href="https://www.ceiich.unam.mx/0/docs/formatos/Proceso para inicio y termino de servicio social.docx" target="_blank">Ver</a></td>
-                      </tr>               
-                    </tbody>
-                  </table>            
-              </section>
-            </div>
+            <table data-order='[[ 3, "asc" ]]' id="example" class="display dataTable">
+              <thead>
+                <tr>
+                  <th class="sorting sorting_asc" tabindex="0" aria-controls="example" aria-label="Name: activate to sort column ascending">Nombre</th>
+                  <th>Ver</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="odd">
+                  <td>Convenios y Bases de Colaboración de Docencia y Educación Continua</td>
+                  <td><a href="https://www.ceiich.unam.mx/0/docs/formatos/Convenios y Bases de Colaboracion de Docencia y Educacion Continua.docx" target="_blank">Ver</a></td>
+                </tr>
+                <tr class="even">
+                  <td>La Educación continua en el CEIICH</td>
+                  <td><a href="https://www.ceiich.unam.mx/0/docs/formatos/La Educacion continua en el CEIICH.docx" target="_blank">Ver</a></td>
+                </tr>
+                <tr>
+                  <td>Proceso para inicio y término de servicio social</td>
+                  <td><a href="https://www.ceiich.unam.mx/0/docs/formatos/Proceso para inicio y termino de servicio social.docx" target="_blank">Ver</a></td>
+                </tr>               
+              </tbody>
+            </table>                        
           </div>
         </div>
     </section>

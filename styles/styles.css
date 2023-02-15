@@ -190,7 +190,6 @@ nav .home:hover > i{
     transition: all 200ms ease-out;
     justify-self: center;
     width: 100%;
-    font-size: 18px;
     text-decoration: none;
 }
 
@@ -227,10 +226,9 @@ nav .menu ul li .fa-home:hover > a{
 
 nav .fa-home:hover{
     background-color: #d04a31;
-    border-radius: 50%;
-    font-size: 30px;
-    text-decoration: none;
     transition: all 400ms ease-out;
+    border-radius: 50%;
+    text-decoration: none;
     color: white;
 }
 
@@ -242,6 +240,53 @@ main{
     border-top: 2px solid #862660;
     padding-bottom: 30px;
     padding-top: 10px;
+}
+
+.container-1 {
+    background-color: #244064;
+    height: 260px;
+}
+
+.container-1 h1 {
+    color: white;
+    font: "Fira Sans";
+    font-style: bold;
+    background-color: #244064;
+}
+
+.container-1 p{
+    color: #d04a31;
+    font: "Fira Sans";
+    font-style: bold;
+    font-size: 100px;
+    background-color: #244064;
+}
+.container-1 .contenedor{ 
+    background-color: #244064;
+    padding-top: 3%;
+    padding-left: 15%;
+}
+
+.container-1 .col-1{
+   background-color: #244064; 
+}
+.container-1 .col-sm-4{
+   background-color: #244064; 
+}
+
+.row{
+   background-color: #244064;
+   width: 100%; 
+}
+
+td a {
+    font-size: 16px;
+    background-color: transparent;
+    color: #244064;
+}
+
+.nav nav-tabs{
+    color: #244064;
 }
 
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -491,12 +536,6 @@ body .inicioSesion .swiper-espacio .swiper-slide3 {
     justify-content:space-around;
 }
 
-
-.espacioInformativo h2:hover {
-  background-color: #862660;
-    color: white !important;
-    border-radius: 5px;
-}
 
 .espacioInformativo .hov .flotante{
     display: none;
@@ -808,104 +847,6 @@ body .inicioSesion .swiper-espacio .swiper-slide3 {
 .organos i{
     margin: 10px;
 }
-
-.organos .hov:hover > i{
-    font-size: 30px;
-    padding-bottom: 5px;
-    transition: all 300ms ease-out;
-    text-decoration: underline;
-    text-decoration-color:#1A5BA7;
-}
-
-.organos .hov {
-    transition: all 500ms ease-out;
-    text-align: center;
-    margin: 20px;
-}
-
-
-.organos .hov i{
-    padding-right: 15px;
-}
-.organos .hov i2{
-    background-color: #F5F6FA;
-}
-
-
-.organos .hov .flotante{
-    display: none;
-    opacity: 1;
-    margin: 15px 10%;
-    flex-direction: column;   
-    color:#1A5BA7;
-    border: solid 1px #862660;
-    justify-content: center;
-    text-align: left;   
-    border-radius: 15px;
-    transition: all 500ms ease-out;
-    background-color: #F5F6FA;
-}
-
-
-.organos .hov .flotante a{
-    margin: 15px;
-    transition: all 100ms ease-out;
-    text-align: center;
-    padding-top: -20px;
-   
-    background-color: #F5F6FA;
-    text-decoration-color:#1A5BA7;
-}
-
-.organos .hov .flotante p{
-    text-align: justify;
-    font-size:25px;
-    background-color: #F5F6FA;
-    text-align: center;
-}
-
-.organos .hov .flotante br{
-    text-align: justify;
-    background-color: #F5F6FA;
-    font-size: 18px;
-}
-
-.organos .hov .flotante table, td, tr{
-    text-align: justify;
-    background-color: #F5F6FA;
-    font-size: 20px;
-}
-
-.organos .hov .flotante .actas{
-    text-align: justify;
-    background-color: #F5F6FA;
-}
-
-.organos .hov .flotante b{
-    text-align: justify;
-    color:  #862660;
-    background-color: #F5F6FA;
-}
-
-.organos .hov .flotante h3 {
-    text-align: center;
-    color:  #862660;
-    margin: 15px;
-    transition: all 100ms ease-out;
-    padding-top: -20px;
-    background-color: #F5F6FA;
-    font-size:20px;
-}
-
-.organos .hov .flotante a:hover{
-    font-size: 30px;
-    transition: all 300ms ease-out;
-    color: #862660;
-    text-decoration: underline;
-}
-
-
-
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -926,15 +867,6 @@ body .inicioSesion .swiper-espacio .swiper-slide3 {
     padding: 15px;
     
     
-}
-
-.inv h2:hover{
-    background-color: #862660;
-    color: white;
-    border-radius: 10px;
-    text-align: center;
-    transition: all 500ms ease-out;
-   
 }
 
 .inv ul{

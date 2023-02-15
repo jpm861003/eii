@@ -29,8 +29,6 @@ session_start();
         <script src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
         <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
-        <script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
-        <script src="https://cdn.datatables.net/buttons/2.3.2/js/buttons.colVis.min.js"></script>
 
 </head>
 <script>
@@ -40,29 +38,42 @@ function mostrar(enla , etik) {
   enla.innerHTML = (enla.innerHTML == '[-]') ? '[+]' : '[-]';
 }
 </script>
-
-<script>
+<script type="text/javascript">
 $(document).ready(function () {
-    $('#example').DataTable({
+    $('#tablaEII').DataTable({
+        lengthMenu: [
+            [10, 25, 50, -1],
+            [10, 25, 50, 'All'],
+        ],
     });
 });
 </script>
+<script src="./js/buscador.js"></script>
 
 <body>
+  <div class="container-1">
+    <div class="contenedor">
+      <div class="row align-items-center">
+        <div class="col-1">
+         <p>|</p>
+        </div>
+        <div class="col-sm-4">
+          <h1>Espacio informativo</h1>
+        </div>
+      </div>
+    </div>
+  </div>
   <main>
     <section class="inv">
       <div>
         <a href="javascript:subir();"><i class="fas fa-angle-up up" alt="Ir arriba"></i></a>
-      </div>
-  
-      <div align="center">
-        <img src="./src/images/Banner-espacio-informativo-CEIICH.jpg" width="250" height="115">
       </div>
       <div class="total">
         <p align="right">Por su seguridad, no olvide salir de esta página
           <a href="espacioCerrar.php"><i class="fa fa-window-close" aria-hidden="true"></i></a>
         </p>
       </div>
+      <div>
 
       <div class="total">
         <div class="container text-center">
@@ -90,41 +101,43 @@ $(document).ready(function () {
             <div class="tab-content" id="myTabContent">
               <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
                 <a class="nav-link" href="javascript:mostrarConsejoInterno();">Consejo Interno</a>
+                <table name="tablaEII" data-order='[[ 3, "asc" ]]' id="tablaEII" class="order-table display dataTable">
 
-                <div id="example_wrapper" class="dataTables_wrapper">
-                  <div class="dataTables_length" id="example_length">
+                <div id="tablaEII_wrapper" class="dataTables_wrapper">
+                  <div class="dataTables_length" id="tablaEII_length">
                     Mostrar:
-                      <select name="example_length" aria-controls="example" class="">
-                        <option value="10"><font style="vertical-align: inherit;">10</font></option>
-                        <option value="25"><font style="vertical-align: inherit;">25</font></option>
-                        <option value="50"><font style="vertical-align: inherit;">50</font></option>
-                        <option value="100"><font style="vertical-align: inherit;">100</font></option>
+                      <select id="tablaEII" aria-controls="example">
+                        <option value="10">10</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
                       </select> entradas
                   </div>
-                  <div id="example_filter" class="dataTables_filter" align="right">
-                    <label align="right">Buscar:<input  type="search" class="" placeholder="" aria-controls="example"></label>
+                  <div id="tablaEII" class="dataTables_filter" align="right">
+                    <label align="right">Buscar:<input type="text" class="form-control col-md-2 light-table-filter" placeholder="" data-table="order-table"></label>
                   </div>
+                  <div></div>
                 </div>
-                <table data-order='[[ 3, "asc" ]]' id="example" class="display dataTable">
+                
                   <thead>
                     <tr>
-                      <th class="sorting sorting_asc" tabindex="0" aria-controls="example" aria-label="Name: activate to sort column ascending">Nombre</th>
-                      <th class="sorting sorting_asc" tabindex="0" aria-controls="example"aria-label="Name: activate to sort column ascending">Tipo</th>
+                      <th class="sorting sorting_asc" tabindex="0" aria-controls="tablaEII" aria-label="Name: activate to sort column ascending">Nombre</th>
+                      <th class="sorting sorting_asc" tabindex="0" aria-controls="tablaEII" aria-label="Name: activate to sort column ascending">Tipo</th>
                       <th class="sorting sorting_asc">Fecha</th>
                       <th>Ver</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr class="odd">
-                      <td>Acta del 29 de marzo</td>
-                      <td class="sorting_1">Ordinaria</td>
-                      <td>2016-03-29</td>
+                      <td data-search="Acta del 29 de marzo">Acta del 29 de marzo</td>
+                      <td data-search="Ordinaria">Ordinaria</td>
+                      <td data-order="20160329">2016-03-29</td>
                       <td><a href="https://drive.google.com/file/d/1fUiw7Cr_p5xvmn29xatxb50GPJUjnHmc/view?usp=sharing" target="_blank">Ver</a></td>
                     </tr>
                     <tr class="even">
-                      <td>Acta del 12 de abril</td>
-                      <td class="sorting_1">Ordinaria</td>
-                      <td>2016-04-12</td>
+                      <td data-search="Acta del 12 de abril">Acta del 12 de abril</td>
+                      <td data-search="Ordinaria">Ordinaria</td>
+                      <td data-order="20160412">2016-04-12</td>
                       <td><a href="https://drive.google.com/file/d/1FOsVrAt6vqMB7JdKi3fW7pBuAkxbB9Vq/view?usp=sharing" target="_blank">Ver</a></td>
                     </tr>
                     <tr>
@@ -198,7 +211,103 @@ $(document).ready(function () {
                       <td>Complementaria</td>
                       <td>2016-06-22</td>
                       <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/22. 22 de junio complementaria.pdf" target="_blank">Ver</a></td>
-                    </tr>    
+                    </tr>
+                    <tr>
+                      <td>Acta del 27 de julio</td>
+                      <td>Ordinaria</td>
+                      <td>2016-07-27</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/23. 27 de julio.pdf" target="_blank">Ver</a></td>
+                    </tr>
+                    <tr>
+                      <td>Acta del 27 de julio</td>
+                      <td>Complementaria</td>
+                      <td>2016-07-27</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/24. 27 de julio complementria.pdf" target="_blank">Ver</a></td>
+                    </tr>
+                    <tr>
+                      <td>Acta del 10 de agosto</td>
+                      <td>Ordinaria</td>
+                      <td>2016-08-10</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/25. 10 de agosto.pdf" target="_blank">Ver</a></td>
+                    </tr>
+                    <tr>
+                      <td>Acta del 23 de agosto</td>
+                      <td>Ordinaria</td>
+                      <td>2016-08-23</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/26. 23 de agosto.pdf" target="_blank">Ver</a></td>
+                    </tr>
+                    <tr>
+                      <td>Acta del 6 de septiembre</td>
+                      <td>Ordinaria</td>
+                      <td>2016-09-06</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/27. 6 de septiembre.pdf" target="_blank">Ver</a></td>
+                    </tr>
+                    <tr>
+                      <td>Acta del 21 de septiembre</td>
+                      <td>Ordinaria</td>
+                      <td>2016-09-21</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/28. 21 de septiembre.pdf" target="_blank">Ver</a></td>
+                    </tr>
+                    <tr>
+                      <td>Acta del 5 de octubre</td>
+                      <td>Ordinaria</td>
+                      <td>2016-10-05</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/29. 5 de octubre.pdf" target="_blank">Ver</a></td>
+                    </tr> 
+                    <tr>
+                      <td>Acta del 19 de octubre</td>
+                      <td>Ordinaria</td>
+                      <td>2016-10-19</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/30. 19 de octubre.pdf" target="_blank">Ver</a></td>
+                    </tr>
+                    <tr>
+                      <td>Acta del 19 de octubre, solicitud becas</td>
+                      <td>Complementaria</td>
+                      <td>2016-10-19</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/31. 19 de octubre complementaria.pdf" target="_blank">Ver</a></td>
+                    </tr>
+                    <tr>
+                      <td>Acta del 19 de octubre, informes anuales</td>
+                      <td>Complementaria</td>
+                      <td>2016-10-19</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/32. 19 de octubre complementaria.pdf" target="_blank">Ver</a></td>
+                    </tr>
+                    <tr>
+                      <td>Acta del 7 de noviembre</td>
+                      <td>Ordinaria</td>
+                      <td>2016-11-07</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/33. 7 de noviembre.pdf" target="_blank">Ver</a></td>
+                    </tr>
+                    <tr>
+                      <td>Acta del 17 de noviembre</td>
+                      <td>Ordinaria</td>
+                      <td>2016-11-17</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/34. 17 de noviembre.pdf" target="_blank">Ver</a></td>
+                    </tr>
+                    <tr>
+                      <td>Acta del 17 de noviembre</td>
+                      <td>Complementaria</td>
+                      <td>2016-11-17</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/35. 17 de noviembre complementaria.pdf" target="_blank">Ver</a></td>
+                    </tr>
+                    <tr>
+                      <td>Acta del 30 de noviembre</td>
+                      <td>Ordinaria</td>
+                      <td>2016-11-30</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/36. 30 de noviembre.pdf" target="_blank">Ver</a></td>
+                    </tr>
+                    <tr>
+                      <td>Acta del 14 de diciembre</td>
+                      <td>Ordinaria</td>
+                      <td>2016-12-14</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/37. 14 de diciembre.pdf" target="_blank">Ver</a></td>
+                    </tr>
+                    <tr>
+                      <td>Acta del 14 de diciembre</td>
+                      <td>Complementaria</td>
+                      <td>2016-12-14</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/38. 14 de diciembre complementaria.pdf" target="_blank">Ver</a></td>
+                    </tr>     
                   </tbody>
                 </table>
               </div>
@@ -247,7 +356,126 @@ $(document).ready(function () {
                 </table>
               </div>
               <div class="tab-pane fade" id="presupuesto-tab-pane" role="tabpanel" aria-labelledby="presupuesto-tab" tabindex="0">
-                <a class="nav-link" href="javascript:mostrarPresupuesto();"> Ejercicio presupuestal</a>
+                <div id="example_wrapper" class="dataTables_wrapper">
+                    <div class="row">
+                      <div class="col-sm-12 col-md-6">
+                        <div class="dataTables_length" id="example_length">
+                          Mostrar:
+                            <select name="example_length" aria-controls="example" class="">
+                              <option value="10"><font style="vertical-align: inherit;">10</font></option>
+                              <option value="25"><font style="vertical-align: inherit;">25</font></option>
+                              <option value="50"><font style="vertical-align: inherit;">50</font></option>
+                              <option value="100"><font style="vertical-align: inherit;">100</font></option>
+                            </select> entradas
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <div id="tablaEII" class="dataTables_filter" align="right">
+                          <label align="right">Buscar:<input  type="text" class="form-control col-md-3 light-table-filter" placeholder="" data-table="order-table"></label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <table data-order='[[ 3, "asc" ]]' id="example" class="order-table display dataTable">
+                  <thead>
+                    <tr>
+                      <th class="sorting sorting_asc" tabindex="0" aria-controls="example" aria-label="Name: activate to sort column ascending">Nombre</th>
+                      <th class="sorting sorting_asc" tabindex="0" aria-controls="example"aria-label="Name: activate to sort column ascending">Tipo</th>
+                      <th class="sorting sorting_asc">Fecha</th>
+                      <th>Ver</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Contrataciones de asistentes de investigadores</td>
+                      <td>Contrato</td>
+                      <td>2017-03-29</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/Copia de Contratacion asistentes inv.  2017-1_.pdf" target="_blank">Ver</a></td>
+                    </tr>
+                    <tr>
+                      <td>Presupuesto para viajes de académicos</td>
+                      <td>Viajes</td>
+                      <td>2017-04-12</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/Copia de Presupuesto  Investigadores  y  Tecnicos Aca. 2017_.pdf" target="_blank">Ver</a></td>
+                    </tr>
+                    <tr>
+                      <td>Presupuesto para invitados</td>
+                      <td>Invitados</td>
+                      <td>2017-03-16</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/Copia de PRESUPUESTO 2017 INVITADOS _.pdf" target="_blank">Ver</a></td>
+                    </tr>
+                    <tr>
+                      <td>Presupuesto para personal de apoyo</td>
+                      <td>Personal de apoyo</td>
+                      <td>2017-03-16</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/PERSONAL DE APOYO DE SERVICIOS PTA.    282 - 2017-1.pdf" target="_blank">Ver</a></td>
+                    </tr>
+                    <tr>
+                      <td>Presupuesto para viajes de académicos</td>
+                      <td>Viajes</td>
+                      <td>2018-04-12</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/VIAJES ACADEMICOS 2018.pdf" target="_blank">Ver</a></td>
+                    </tr>
+                    <tr>
+                      <td>Presupuesto para invitados</td>
+                      <td>Invitados</td>
+                      <td>2018-03-16</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/PROFESORES INVITADOS 2018.pdf" target="_blank">Ver</a></td>
+                    </tr>
+                    <tr>
+                      <td>Presupuesto para personal de apoyo</td>
+                      <td>Personal de apoyo</td>
+                      <td>2018-03-16</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/PERSONAL DE APOYO CONTRATACION DE  SERVICIOS  2018.pdf" target="_blank">Ver</a></td>
+                    </tr>
+                    <tr>
+                      <td>Presupuesto 2018 vs 2019</td>
+                      <td>Comparativo</td>
+                      <td>2019-03-16</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/Presupuesto 2018-2019.pdf" target="_blank">Ver</a></td>
+                    </tr>
+                    <tr class="even">
+                      <td>Presupuesto para viajes de académicos</td>
+                      <td >Viajes</td>
+                      <td>2019-04-12</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/VIAJES ACADEMICOS 2019.pdf" target="_blank">Ver</a></td>
+                    </tr>
+                    <tr>
+                      <td>Presupuesto para invitados</td>
+                      <td>Invitados</td>
+                      <td>2019-03-16</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/PROFESORES INVITADOS 2019.pdf" target="_blank">Ver</a></td>
+                    </tr>
+                    <tr class="even">
+                      <td>Presupuesto para viajes de académicos</td>
+                      <td >Viajes</td>
+                      <td>2020-04-12</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/VIAJES ACADEMICOS 2020.pdf" target="_blank">Ver</a></td>
+                    </tr>
+                    <tr>
+                      <td>Presupuesto para invitados</td>
+                      <td>Invitados</td>
+                      <td>2020-03-16</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/PROFESORES INVITADOS 2020.pdf" target="_blank">Ver</a></td>
+                    </tr>
+                    <tr class="even">
+                      <td>Presupuesto para viajes de académicos</td>
+                      <td >Viajes</td>
+                      <td>2021-04-12</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/RELACION DE VIAJES 2021-oct.pdf" target="_blank">Ver</a></td>
+                    </tr>
+                    <tr>
+                      <td>Presupuesto para profesores invitados</td>
+                      <td>Invitados</td>
+                      <td>2021-03-16</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/RELACION DE PROF INVITADOS 2021-oct.pdf" target="_blank">Ver</a></td>
+                    </tr>
+
+
+                  </tbody>
+                </table>
+
+
               </div>
               <div class="tab-pane fade" id="oficiales-tab-pane" role="tabpanel" aria-labelledby="oficiales-tab" tabindex="0">
                 <table data-order='[[ 3, "asc" ]]' id="example" class="display dataTable">
@@ -261,7 +489,7 @@ $(document).ready(function () {
                   <tbody>
                     <tr class="odd">
                       <td>Manual de Organización del CEIICH</td>
-                      <td class="sorting_1">2019-10-25</td>
+                      <td>2019-10-25</td>
                       <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/MANUAL DE ORGANIZACION 2016.pdf" target="_blank">Ver</a></td>
                     </tr>
                   </tbody>
@@ -278,29 +506,214 @@ $(document).ready(function () {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr class="odd">
+                    <tr>
                       <td>Polifonías feministas</td>
-                      <td class="sorting_1">Dictamen</td>
+                      <td>Dictamen</td>
                       <td>2016-03-29</td>
                       <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/Predictamen Polifonias feministas VF.pdf" target="_blank">Ver</a></td>
                     </tr>
-                    <tr class="even">
+                    <tr>
                       <td>Dalia</td>
-                      <td class="sorting_1">Dictamen</td>
+                      <td>Dictamen</td>
                       <td>2016-04-12</td>
                       <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/Predictamen Dalia VF.pdf" target="_blank">Ver</a></td>
                     </tr>
                     <tr>
                       <td>Acta del 16 de marzo</td>
-                      <td class="sorting_1">Acuerdos</td>
+                      <td>Acuerdos</td>
                       <td>2021-03-16</td>
                       <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/ActaprimerareunionSubcomiteProduccionAudiovisual_VF.pdf" target="_blank">Ver</a></td>
                     </tr> 
                   </tbody>
                 </table>
               </div>
+
               <div class="tab-pane fade" id="editorial-tab-pane" role="tabpanel" aria-labelledby="editorial-tab" tabindex="0">
-                <a class="nav-link" href="javascript:mostrarPlanEditorial();">Plan editorial</a>
+                <table name="tablaEII" data-order='[[ 3, "asc" ]]' id="tablaEII" class="order-table display dataTable">
+
+                  
+                  <div id="example_wrapper" class="dataTables_wrapper">
+                    <div class="row">
+                      <div class="col-sm-12 col-md-6">
+                        <div class="dataTables_length" id="example_length">
+                          Mostrar:
+                            <select name="example_length" aria-controls="example" class="">
+                              <option value="10"><font style="vertical-align: inherit;">10</font></option>
+                              <option value="25"><font style="vertical-align: inherit;">25</font></option>
+                              <option value="50"><font style="vertical-align: inherit;">50</font></option>
+                              <option value="100"><font style="vertical-align: inherit;">100</font></option>
+                            </select> entradas
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <div id="tablaEII" class="dataTables_filter" align="right">
+                          <label align="right">Buscar:<input  type="text" class="form-control col-md-3 light-table-filter" placeholder="" data-table="order-table"></label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              
+                  <thead>
+                    <tr>
+                      <th class="sorting sorting_asc" tabindex="0" aria-controls="tablaEII" aria-label="Name: activate to sort column ascending">Nombre</th>
+                      <th class="sorting sorting_asc" tabindex="0" aria-controls="tablaEII" aria-label="Name: activate to sort column ascending">Tipo</th>
+                      <th class="sorting sorting_asc">Fecha</th>
+                      <th>Ver</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="odd">
+                      <td data-search="">Programa editorial, 2022</td>
+                      <td data-search="">Programa</td>
+                      <td data-order="">2022-03-29</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/Programa editorial 2022_VF.pdf" target="_blank">Ver</a></td>
+                    </tr>
+                    <tr class="even">
+                      <td data-search="">Lineamientos editoriales, 2021</td>
+                      <td data-search="">Lineamientos</td>
+                      <td data-order="">2021-04-12</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/LineamientosEditoriales2021.pdf" target="_blank">Ver</a></td>
+                    </tr>
+                    <tr>
+                      <td>Guía de entrega de originales para publicación</td>
+                      <td class="sorting_1">Guía</td>
+                      <td>2020-04-12</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/GuiaEntregaOriginales.pdf" target="_blank">Ver</a></td>
+                    </tr> 
+                    <tr>
+                      <td>Cuestionario de estrategia de contribución e impacto académico</td>
+                      <td>Cuestionario</td>
+                      <td>2020-04-21</td>
+                      <td><a href="https://www.ceiich.unam.mx/0/docs//CuestionarioEstrategia.docx" target="_blank">Ver</a></td>
+                    </tr>
+                    <tr>
+                      <td>Programa editorial, 2019</td>
+                      <td>Programa</td>
+                      <td>2019-04-26</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/Programa editorial.pdf" target="_blank">Ver</a></td>
+                    </tr>
+                    <tr>
+                      <td>Material de acceso abierto descargado</td>
+                      <td>Documento</td>
+                      <td>2017-05-02</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/Descargas_2017-06-16FINAL.pdf" target="_blank">Ver</a></td>
+                    </tr>
+                    <tr>
+                      <td>Seguimiento de dictámenes, 2017</td>
+                      <td>Relación</td>
+                      <td>2017-05-02</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/RELACION DE SEGUIMIENTO DE DICTAMENES 2017.pdf" target="_blank">Ver</a></td>
+                    </tr>
+                    <tr>
+                      <td>Seguimiento de dictámenes, 2018</td>
+                      <td>Relación</td>
+                      <td>2018-05-02</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/RELACION DE SEGUIMINETO DE DICTAMENES 2018.pdf" target="_blank">Ver</a></td>
+                    </tr>
+                    <tr>
+                      <td>Seguimiento de dictámenes, 2019</td>
+                      <td>Relación</td>
+                      <td>2019-05-11</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/RELACION DE SEGUIMINETO DE DICTAMENES 2019.pdf" target="_blank">Ver</a></td>
+                    </tr>  
+                    <tr>
+                      <td>Acta del 01 de abril</td>
+                      <td>Acuerdos</td>
+                      <td>2022-04-01</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/Acta del Comité Editorial 01-04-2022_VF.pdf" target="_blank">Ver</a></td>
+                    </tr>
+                    <tr>
+                      <td>Acta del 07 de diciembre</td>
+                      <td>Acuerdos</td>
+                      <td>2021-12-07</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/ActaComiteEditorial07_12_2021.pdf" target="_blank">Ver</a></td>
+                    </tr>
+                    <tr>
+                      <td>Acta del 30 de julio</td>
+                      <td>Acuerdos</td>
+                      <td>2021-07-30</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/ActaComiteEditorial30-07-2021_VF.pdf" target="_blank">Ver</a></td>
+                    </tr>
+                    <tr>
+                      <td>Acta del 7 de abril</td>
+                      <td>Acuerdos</td>
+                      <td>2021-04-07</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/ActaComiteEditorial07-04-2021_VF.pdf" target="_blank">Ver</a></td>
+                    </tr>
+                    <tr>
+                      <td>Acta del 26 de noviembre</td>
+                      <td>Acuerdos</td>
+                      <td>2020-11-26</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/ActaComiteEditorial26-11-2020VF.pdf" target="_blank">Ver</a></td>
+                    </tr>
+                    <tr>
+                      <td>Acta del 26 de junio</td>
+                      <td>Acuerdos</td>
+                      <td>2020-06-26</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/Acta_26junio2020_com_edit.pdf" target="_blank">Ver</a></td>
+                    </tr>
+                    <tr>
+                      <td>Acta del 12 de noviembre</td>
+                      <td>Acuerdos</td>
+                      <td>2019-11-12</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/3. Acta 12 noviembre 19-Com. Edit..pdf" target="_blank">Ver</a></td>
+                    </tr> 
+                    <tr>
+                      <td>Acta del 26 de junio</td>
+                      <td>Acuerdos</td>
+                      <td>2019-06-26</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/2. Acta 26 junio 19-CE.pdf" target="_blank">Ver</a></td>
+                    </tr>
+                    <tr>
+                      <td>Acta del 5 de marzo</td>
+                      <td>Acuerdos</td>
+                      <td>2019-03-05</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/1. Acta del 5 de marzo de 2019-Com. Edit.pdf" target="_blank">Ver</a></td>
+                    </tr>
+                    <tr>
+                      <td>Acta del 23 de octubre</td>
+                      <td>Acuerdos</td>
+                      <td>2018-10-23</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/Acta Comite Editorial-23-10-18.pdf" target="_blank">Ver</a></td>
+                    </tr>  
+                    <tr>
+                      <td>Acta del 26 de junio</td>
+                      <td>Acuerdos</td>
+                      <td>2018-06-26</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/Acta del 26 de junio de 2018-Com. Edit.pdf" target="_blank">Ver</a></td>
+                    </tr> 
+                    <tr>
+                      <td>Acta del 3 de abril</td>
+                      <td>Acuerdos</td>
+                      <td>2018-04-03</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/Acta del 3 de abril de 2018.pdf" target="_blank">Ver</a></td>
+                    </tr>
+                    <tr>
+                      <td>Acta del 21 de noviembre</td>
+                      <td>Acuerdos</td>
+                      <td>2017-11-21</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/2. acta comite editorial-13-11-21.pdf" target="_blank">Ver</a></td>
+                    </tr>
+                    <tr>
+                      <td>Acta del 13 de junio</td>
+                      <td>Acuerdos</td>
+                      <td>2017-06-13</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/2. acta comite editorial-13-06-17.pdf" target="_blank">Ver</a></td>
+                    </tr>
+                    <tr>
+                      <td>Acta del 20 de febrero</td>
+                      <td>Acuerdos</td>
+                      <td>2017-02-20</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/Acta-Comte-Edit_2017-02-20.pdf" target="_blank">Ver</a></td>
+                    </tr>
+                    <tr>
+                      <td>Acta del 7 y 24 de octubre</td>
+                      <td>Acuerdos</td>
+                      <td>2016-10-07</td>
+                      <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/Acta-Comte-Edit_2016-10-07.pdf" target="_blank">Ver</a></td>
+                    </tr>         
+                  </tbody>
+                </table>
               </div>
             </div>  
         </div>
@@ -314,27 +727,7 @@ $(document).ready(function () {
               <a href="javascript:cerrarConsejoInterno();"><i2 class="fas fa-times-circle"></i2></a>
               <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/CalendarioDeSesionesCI2022.pdf" target="_blank">Calendario de sesiones, 2022</a>             
 
-              <p><b>2016 <a href="#" onclick="mostrar(this,'oculto'); return false" />[+]</a></b></p>
-                <div id="oculto" class="actas" style="display:none">
-                  <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/23. 27 de julio.pdf" target="_blank"><i2 class="fas fa-angle-right"> Acta del 27 de julio</i2></a><br>
-                  <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/24. 27 de julio complementria.pdf" target="_blank"><i2 class="fas fa-angle-right"> Acta del 27 de julio, complementaria</i2></a><br>
-                  <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/25. 10 de agosto.pdf" target="_blank"><i2 class="fas fa-angle-right"> Acta del 10 de agosto</i2></a><br>
-                  <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/26. 23 de agosto.pdf" target="_blank"><i2 class="fas fa-angle-right"> Acta del 23 de agosto</i2></a><br>
-                  <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/27. 6 de septiembre.pdf" target="_blank"><i2 class="fas fa-angle-right"> Acta del 6 de septiembre</i2></a><br>
-                  <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/28. 21 de septiembre.pdf" target="_blank"><i2 class="fas fa-angle-right"> Acta del 21 de septiembre</i2></a><br>
-                  <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/29. 5 de octubre.pdf" target="_blank"><i2 class="fas fa-angle-right"> Acta del 5 de octubre</i2></a><br>
-                  <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/30. 19 de octubre.pdf" target="_blank"><i2 class="fas fa-angle-right"> Acta del 19 de octubre</i2></a><br>
-                  <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/31. 19 de octubre complementaria.pdf" target="_blank"><i2 class="fas fa-angle-right"> Acta del 19 de octubre, solicitud becas</i2></a>
-                  <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/32. 19 de octubre complementaria.pdf" target="_blank"><i2 class="fas fa-angle-right"> Acta del 19 de octubre, informes anuales</i2></a><br>
-                  <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/33. 7 de noviembre.pdf" target="_blank"><i2 class="fas fa-angle-right"> Acta del 7 de noviembre</i2></a><br>
-                  <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/34. 17 de noviembre.pdf" target="_blank"><i2 class="fas fa-angle-right"> Acta del 17 de noviembre</i2></a><br>
-                  <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/35. 17 de noviembre complementaria.pdf" target="_blank"><i2 class="fas fa-angle-right"> Acta del 17 de noviembre, complementaria</i2></a><br>
-                  <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/36. 30 de noviembre.pdf" target="_blank"><i2 class="fas fa-angle-right"> Acta del 30 de noviembre</i2></a><br>
-                  <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/37. 14 de diciembre.pdf" target="_blank"><i2 class="fas fa-angle-right"> Acta del 14 de diciembre</i2></a><br>
-                  <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/38. 14 de diciembre complementaria.pdf" target="_blank"><i2 class="fas fa-angle-right"> Acta del 14 de diciembre, complementaria</i2></a>
-                </div>
-
-                <p><b> 2017 <a href="#" onclick="mostrar(this,'oculto01'); return false" />[+]</a> </b></p>
+              <p><b> 2017 <a href="#" onclick="mostrar(this,'oculto01'); return false" />[+]</a> </b></p>
                 <div id="oculto01" class="actas" style="display:none">
                   <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/1. Acta 16, 17, 18 y 25 de enero de  2017.pdf" target="_blank"><i2 class="fas fa-angle-right"> Actas del 16, 17, 18 y 25 de enero</i2></a><br>
                   <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/2. Acta 18 de enero de 2017.pdf" target="_blank"><i2 class="fas fa-angle-right"> Acta del 18 de enero</i2></a><br>
@@ -561,84 +954,6 @@ $(document).ready(function () {
                   <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/38_Complementaria_17Agosto_CF.pdf" target="_blank"><i2 class="fas fa-angle-right">Acta del 17 de agosto, licencia académica</i2></a><br>
                 </div>
           </div>
-          
-          <div class="hov">
-            <div id="flotantePresupuesto" class="flotante" align="center">
-              <a href="javascript:cerrarPresupuesto();"><i2 class="fas fa-times-circle"></i2></a>
-                
-                <p><b> 2017 <a href="#" onclick="mostrar(this,'ocultoEjercicioPresupuestal01'); return false" />[+]</a></b></p>
-                <div id="ocultoEjercicioPresupuestal01" class="actas" style="display:none">
-                  <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/Copia de Contratacion asistentes inv.  2017-1_.pdf" target="_blank"><i2 class="fas fa-chevron-circle-right"> Contrataciones de asistentes de investigadores</i2></a>
-                  <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/Copia de Presupuesto  Investigadores  y  Tecnicos Aca. 2017_.pdf" target="_blank"><i2 class="fas fa-chevron-circle-right"> Presupuesto para viajes de académicos</i2></a><br>
-                  <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/Copia de PRESUPUESTO 2017 INVITADOS _.pdf" target="_blank"><i2 class="fas fa-chevron-circle-right"> Presupuestos para invitados</i2></a><br>
-                  <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/PERSONAL DE APOYO DE SERVICIOS PTA.    282 - 2017-1.pdf" target="_blank"><i2 class="fas fa-chevron-circle-right"> Presupuesto para personal de apoyo</i2></a>
-                </div>
-
-                <p><b>2018 <a href="#" onclick="mostrar(this,'ocultoEjercicioPresupuestal02'); return false" />[+]</a></b></p>
-                <div id="ocultoEjercicioPresupuestal02" class="actas" style="display:none">
-                  <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/VIAJES ACADEMICOS 2018.pdf" target="_blank"><i2 class="fas fa-chevron-circle-right"> Presupuesto para viajes de académicos</i2></a><br>
-                  <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/PROFESORES INVITADOS 2018.pdf" target="_blank"><i2 class="fas fa-chevron-circle-right"> Presupuesto para invitados</i2></a><br>
-                  <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/PERSONAL DE APOYO CONTRATACION DE  SERVICIOS  2018.pdf" target="_blank"><i2 class="fas fa-chevron-circle-right"> Presupuesto para personal de apoyo</i2></a>
-                </div>
-
-                <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/Presupuesto 2018-2019.pdf" target="_blank">&bull; Presupuesto 2018 vs 2019</a>
-
-                <p><b>2019 <a href="#" onclick="mostrar(this,'ocultoEjercicioPresupuestal03'); return false" />[+]</a></b></p>
-                <div id="ocultoEjercicioPresupuestal03" class="actas" style="display:none">
-                  <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/VIAJES ACADEMICOS 2019.pdf" target="_blank"><i2 class="fas fa-chevron-circle-right"> Presupuesto para viajes de académicos</i2></a><br>
-                  <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/PROFESORES INVITADOS 2019.pdf" target="_blank"><i2 class="fas fa-chevron-circle-right"> Presupuesto para invitados</i2></a>
-                  <!-- <li><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/PERSONAL DE APOYO CONTRATACION DE  SERVICIOS  2018.pdf" target="_blank">Presupuesto para personal de apoyo</a></li>-->
-                </div>
-
-                <p><b>2020 <a href="#" onclick="mostrar(this,'ocultoEjercicioPresupuestal04'); return false" />[+]</a></b></p>
-                <div id="ocultoEjercicioPresupuestal04" class="actas" style="display:none">
-                  <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/VIAJES ACADEMICOS 2020.pdf" target="_blank"><i2 class="fas fa-chevron-circle-right"> Presupuesto para viajes de académicos</i2></a><br>
-                  <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/PROFESORES INVITADOS 2020.pdf" target="_blank"><i2 class="fas fa-chevron-circle-right"> Presupuesto para invitados</i2></a>
-                  <!-- <li><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/PERSONAL DE APOYO CONTRATACION DE  SERVICIOS  2018.pdf" target="_blank">Presupuesto para personal de apoyo</a></li>-->
-                </div>
-
-                <p><b>2021 <a href="#" onclick="mostrar(this,'ocultoEjercicioPresupuestal05'); return false" />[+]</a></b></p>
-                <div id="ocultoEjercicioPresupuestal05" class="actas" style="display:none">
-                  <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/RELACION DE VIAJES 2021-oct.pdf" target="_blank"><i2 class="fas fa-chevron-circle-right"> Presupuesto para viajes de académicos</i2></a><br>
-                  <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/RELACION DE PROF INVITADOS 2021-oct.pdf" target="_blank"><i2 class="fas fa-chevron-circle-right"> Presupuesto para profesores invitados</i2></a>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="hov">
-              <div id="flotantePlanEditorial" class="flotante" align="center">
-                <a href="javascript:cerrarPlanEditorial();"><i2 class="fas fa-times-circle"></i2></a>
-                <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/Programa editorial 2022_VF.pdf" target="_blank"><i2 class="fas fa-check-square"> Programa editorial, 2022</i2></a>
-                <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/LineamientosEditoriales2021.pdf" target="_blank"><i2 class="fas fa-check-square"> Lineamientos editoriales, 2021</i2></a>
-                <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/GuiaEntregaOriginales.pdf" target="_blank"><i2 class="fas fa-check-square"> Guía de entrega de originales para publicación</i2></a>
-                <a href="https://www.ceiich.unam.mx/0/docs//CuestionarioEstrategia.docx"><i2 class="fas fa-check-square"> Cuestionario de estrategia de contribución e impacto académico</i2></a>
-                <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/Programa editorial.pdf" target="_blank"><i2 class="fas fa-check-square"> Programa editorial, 2019</i2></a>
-                <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/Descargas_2017-06-16FINAL.pdf" target="_blank"><i2 class="fas fa-check-square"> Material de acceso abierto descargado</i2></a>
-                <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/RELACION DE SEGUIMIENTO DE DICTAMENES 2017.pdf" target="_blank"><i2 class="fas fa-check-square"> Relación de seguimiento de dictámenes, 2017</i2></a>
-                <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/RELACION DE SEGUIMINETO DE DICTAMENES 2018.pdf" target="_blank"><i2 class="fas fa-check-square"> Relación de seguimiento de dictámenes, 2018</i2></a>
-                <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/RELACION DE SEGUIMINETO DE DICTAMENES 2019.pdf" target="_blank"><i2 class="fas fa-check-square"> Relación de seguimiento de dictámenes, 2019</i2></a>
-
-                <h3>Actas de Acuerdos del Comité Editorial</h3>
-              
-                <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/Acta del Comité Editorial 01-04-2022_VF.pdf" target="_blank"><i2 class="fas fa-angle-right"> Acta del 01 de abril de 2022</i2></a>
-                <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/ActaComiteEditorial07_12_2021.pdf" target="_blank"><i2 class="fas fa-angle-right"> Acta del 07 de diciembre de 2021</i2></a>
-                <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/ActaComiteEditorial30-07-2021_VF.pdf" target="_blank"><i2 class="fas fa-angle-right"> Acta del 30 de julio de 2021</i2></a>
-                <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/ActaComiteEditorial07-04-2021_VF.pdf" target="_blank"><i2 class="fas fa-angle-right"> Acta del 7 de abril de 2021</i2></a>
-                <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/ActaComiteEditorial26-11-2020VF.pdf" target="_blank"><i2 class="fas fa-angle-right"> Acta del 26 de noviembre de 2020</i2></a>
-                <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/Acta_26junio2020_com_edit.pdf" target="_blank"><i2 class="fas fa-angle-right"> Acta del 26 de junio de 2020</i2></a>
-                <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/3. Acta 12 noviembre 19-Com. Edit..pdf" target="_blank"><i2 class="fas fa-angle-right"> Acta del 12 de noviembre de 2019</i2></a>
-                <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/2. Acta 26 junio 19-CE.pdf" target="_blank"><i2 class="fas fa-angle-right"> Acta del 6 de junio de 2019</i2></a>
-                <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/1. Acta del 5 de marzo de 2019-Com. Edit.pdf" target="_blank"><i2 class="fas fa-angle-right"> Acta del 5 de marzo de 2019</i2></a>
-                <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/Acta Comite Editorial-23-10-18.pdf" target="_blank"><i2 class="fas fa-angle-right"> Acta del 23 de octubre de 2018</i2></a>
-                <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/Acta del 26 de junio de 2018-Com. Edit.pdf" target="_blank"><i2 class="fas fa-angle-right"> Acta del 26 de junio de 2018</i2></a>
-                <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/Acta del 3 de abril de 2018.pdf" target="_blank"><i2 class="fas fa-angle-right"> Acta del 3 de abril de 2018</i2></a>
-                <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/2. acta comite editorial-13-11-21.pdf" target="_blank"><i2 class="fas fa-angle-right"> Acta del 21 de noviembre de 2017</i2></a>
-                <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/2. acta comite editorial-13-06-17.pdf" target="_blank"><i2 class="fas fa-angle-right"> Acta del 13 de junio de 2017</i2></a>
-                <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/Acta-Comte-Edit_2017-02-20.pdf" target="_blank"><i2 class="fas fa-angle-right"> Acta del 20 de febrero de 2017</i2></a>
-                <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/Acta-Comte-Edit_2016-10-07.pdf" target="_blank"><i2 class="fas fa-angle-right"> Actas del 7 y 24 de octubre de 2016</i2></a>
-              </div>
-            </div>
 
             <!--<div class="hov">
               <a href="javascript:mostrarDeTrabajo();"><i class="fas fa-dice-d20"> DOCUMENTOS DE TRABAJO</i></a>
@@ -649,9 +964,7 @@ $(document).ready(function () {
             </div>-->
 
         </section>
-      </div>
-
-     
+      </div>     
     </section>
 </main>
 

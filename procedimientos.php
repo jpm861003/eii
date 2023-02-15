@@ -40,14 +40,24 @@ $(document).ready(function () {
 });
 </script>
 <body>
+  <div class="container-1">
+    <div class="contenedor">
+      <div class="row align-items-center">
+        <div class="col-1">
+         <p>|</p>
+        </div>
+        <div class="col-sm-4">
+          <h1>Procedimientos internos</h1>
+        </div>
+      </div>
+    </div>
+  </div>
   <main>
     <section class="inv">
       <div>
         <a href="javascript:subir();"><i class="fas fa-angle-up up" alt="Ir arriba"></i></a>
       </div>
-        <div align="center">
-          <img src="./src/images/Banner-espacio-informativo-CEIICH.jpg" width="250" height="115">
-        </div>
+       
         <div class="total">
           <p align="right">Por su seguridad, no olvide salir de esta página
             <a href="espacioCerrar.php"><i class="fa fa-window-close" aria-hidden="true"></i></a>
@@ -55,7 +65,6 @@ $(document).ready(function () {
         </div>
         <div class="total">
           <div class="container text-center">
-            <h2>PROCEDIMIENTOS INTERNOS</h2>
             <ul class="nav nav-tabs" id="procedimientosTab" role="tablist">
               <li class="nav-item" role="presentacion">
                 <button class="nav-link active" id="colipe-tab" data-bs-toggle="tab" data-bs-target="#colipe-tab-pane" type="button" role="tab" aria-controls="colipe-tab-pane" aria-selected="true">Comisiones, licencias y permisos</button>
@@ -84,12 +93,12 @@ $(document).ready(function () {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr class="odd">
+                    <tr>
                       <td>Mayor a tres días</td>
                       <td class="sorting_1">Comisión</td>
                       <td><a href="https://www.ceiich.unam.mx/0/docs/formatos/4. Comision. Mayores a tres dias.docx" target="_blank">Descargar</a></td>
                     </tr>
-                    <tr class="even">
+                    <tr>
                       <td>Permiso de ausencia corta</td>
                       <td class="sorting_1">Comisión</td>
                       <td><a href="https://www.ceiich.unam.mx/0/docs/formatos/COMISIONES ACADEMICAS-Permisos de ausencias cortas.pdf" target="_blank">Descargar</a></td>
@@ -101,7 +110,7 @@ $(document).ready(function () {
                     </tr> 
                     <tr>
                       <td>Sin goce de sueldo</td>
-                      <td>Licencia</td>
+                      <td class="sorting_1">Licencia</td>
                       <td><a href="https://www.ceiich.unam.mx/0/docs/formatos/LICENCIAS ACADEMICAS-Sin goce de sueldo.pdf" target="_blank">Descargar</a></td>
                     </tr>
                   </tbody>
@@ -116,7 +125,7 @@ $(document).ready(function () {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr class="odd">
+                    <tr>
                       <td>Disfrute de sabático</td>
                       <td><a href="https://www.ceiich.unam.mx/0/docs/formatos/5. Disfrute de Sabatico.docx" target="_blank">Descargar</a></td>
                     </tr>
