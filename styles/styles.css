@@ -1,69 +1,84 @@
-@charset "UTF-8";
 /*----- Archivo de estilos generales del sitio -----*/
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
-  background-color: #ffffff;
-}
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    background-color: #ffffff;
+  }
+  
+  body{
+      display: flex;
+      flex-direction: column;
+  }
+  
+  header {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: 260px;
+      /*width: 200px;*/
+     flex-wrap: wrap;
+      background-color: #e9e6df;
+      
+  }
+  
+  
+  header .logoUnam {
+      display: flex;
+      background-color: #e9e6df;
+      flex-grow: 10;
+      justify-content: center;
+      text-align: left;
+      padding-top: 50px;
+     
 
-body{
-    display: flex;
-    flex-direction: column;
-}
-
-header {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    flex-wrap: wrap;
-    background-color: #e9e6df;
-}
-
-
-header .logoUnam {
-    display: flex;
-    background-color: #e9e6df;
-    flex-grow: 10;
-    justify-content: left;
-    text-align: center;
-    padding-top: 10px;
-    margin: 2%;
-}
-
-header .logoUnam a{
-    display: flex;
-    flex-direction: column;
-    max-height: 100%;
-    background-color: #e9e6df;
-
-}
-
-header .logoUnam img{
-    max-width:100px;
+  }
+  
+  header .logoUnam a{
+      display: flex;
+      flex-direction: column;
+      max-height: 100%;
+      background-color: #e9e6df;
+  
+  }
+  
+  header .logoUnam img{
+    height: 150px;
     align-self: center;
-    background-color: #e9e6df;
-}
-
-header .logoCeiich{
+      align-self: center;
+      background-color: #e9e6df;
+  }
+  
+  header .mosaicoCeiich{
     display: flex;
     background-color: #e9e6df;
-    justify-content: flex-end;
-   
-}
+  
+     
+  }
+  
+  header .mosaicoCeiich img{
+       height: 270px;
+      background-color: #e9e6df;
+      justify-self: flex-start
+      padding 4px;
+  }
+  
+  header .mosaicoCeiich a{
+      text-align: right;
+      align-self: center;
+      background-color: #e9e6df;
+  }
+  
+  
 
-header .logoCeiich img{
-    max-height: 100%;
-    background-color: #e9e6df;
-    justify-self: flex-end;
-    padding: 5px;
-}
 
-header .logoCeiich a{
-    text-align: right;
-    align-self: center;
-    background-color: #e9e6df;
+@media screen and (min-width:360px) {
+    header{
+     flex-direction: row;
+
+    }
+
 }
 
 
@@ -75,21 +90,29 @@ header .logoCeiich a{
     margin: 5px;
 }
 
+/*Centro de inves....*/
 .letter2{
     background-color: #e9e6df;
     text-decoration: none;
     color: #244064;
-    font-size: 18px;
-    margin: 5px;
-    padding: 5%;
-    text-align: left;
+    font-size: 30px;
+    margin: 18px;
+    
+    text-align: center;
 }
 
 .letter2 a{
     background-color: #e9e6df;
     }
 
- 
+ /*ESPACIO INFORMATICO INTERNO*/
+.eii {
+     margin-top: 90px;
+    font-size: 30px;
+
+}
+
+
 .parallax {
     background-image: url("../src/images/mobile.png");
     background-size: auto;
@@ -348,13 +371,14 @@ footer .icons a{
 footer .extern{
     display: flex;
     flex-direction: column;
-    margin-top: 25px;
+    margin-top: 5px;
     background-color: #ebe7df;
     flex-wrap: wrap;
     align-items: center;
     text-align: center;
     justify-content: center;
     padding-bottom: 10px;
+    
 }
 
 footer .extern p{
