@@ -84,48 +84,48 @@ $(document).ready(function () {
             </ul> 
             <div class="tab-content" id="myTabContent">
               <div class="tab-pane fade show active" id="colipe-tab-pane" role="tabpanel" aria-labelledby="colipe-tab" tabindex="0">
-                <table data-order='[[ 3, "asc" ]]' id="example" class="display dataTable">
+                <table id="" class="display dataTable">
                   <thead>
                     <tr>
-                      <th class="sorting sorting_asc" tabindex="0" aria-controls="example" aria-label="Name: activate to sort column ascending">Nombre</th>
-                      <th class="sorting sorting_asc" tabindex="0" aria-controls="example"aria-label="Name: activate to sort column ascending">Tipo</th>
+                      <th>Nombre</th>
+                      <th>Tipo</th>
                       <th>Formato</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
+                    <tr class="odd">
                       <td>Mayor a tres días</td>
-                      <td class="sorting_1">Comisión</td>
+                      <td>Comisión</td>
                       <td><a href="https://www.ceiich.unam.mx/0/docs/formatos/4. Comision. Mayores a tres dias.docx" target="_blank">Descargar</a></td>
                     </tr>
                     <tr>
                       <td>Permiso de ausencia corta</td>
-                      <td class="sorting_1">Comisión</td>
+                      <td>Comisión</td>
                       <td><a href="https://www.ceiich.unam.mx/0/docs/formatos/COMISIONES ACADEMICAS-Permisos de ausencias cortas.pdf" target="_blank">Descargar</a></td>
                     </tr>
-                    <tr>
+                    <tr class="odd">
                       <td>Con goce de sueldo</td>
-                      <td class="sorting_1">Licencia</td>
+                      <td>Licencia</td>
                       <td><a href="https://www.ceiich.unam.mx/0/docs/formatos/LICENCIAS ACADEMICAS-Con goce de sueldo.pdf" target="_blank">Descargar</a></td>
                     </tr> 
                     <tr>
                       <td>Sin goce de sueldo</td>
-                      <td class="sorting_1">Licencia</td>
+                      <td>Licencia</td>
                       <td><a href="https://www.ceiich.unam.mx/0/docs/formatos/LICENCIAS ACADEMICAS-Sin goce de sueldo.pdf" target="_blank">Descargar</a></td>
                     </tr>
                   </tbody>
                 </table>
               </div>
               <div class="tab-pane fade" id="sabatico-tab-pane" role="tabpanel" aria-labelledby="sabatico-tab" tabindex="0">
-                <table data-order='[[ 3, "asc" ]]' id="example" class="display dataTable">
+                <table id="" class="display dataTable">
                   <thead>
                     <tr>
-                      <th class="sorting sorting_asc" tabindex="0" aria-controls="example" aria-label="Name: activate to sort column ascending">Nombre</th>
+                      <th>Nombre</th>
                       <th>Formato</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
+                    <tr class="odd">
                       <td>Disfrute de sabático</td>
                       <td><a href="https://www.ceiich.unam.mx/0/docs/formatos/5. Disfrute de Sabatico.docx" target="_blank">Descargar</a></td>
                     </tr>
@@ -133,7 +133,7 @@ $(document).ready(function () {
                       <td>Regularización de diferimiento de sabático</td>
                       <td><a href="https://www.ceiich.unam.mx/0/docs/formatos/5.1 Diferimiento de Sabatico (Ya paso fecha de inicio).docx" target="_blank">Descargar</a></td>
                     </tr>
-                    <tr>
+                    <tr class="odd">
                       <td>Diferimiento de Sabático</td>
                       <td><a href="https://www.ceiich.unam.mx/0/docs/formatos/5.2 Diferimiento de Sabatico (No ha iniciado).docx" target="_blank">Descargar</a></td>
                     </tr> 
@@ -145,10 +145,10 @@ $(document).ready(function () {
                 </table>
               </div>
               <div class="tab-pane fade" id="promocion-tab-pane" role="tabpanel" aria-labelledby="promocion-tab" tabindex="0">
-                <table data-order='[[ 3, "asc" ]]' id="example" class="display dataTable">
+                <table id="" class="display dataTable">
                   <thead>
                     <tr>
-                      <th class="sorting sorting_asc" tabindex="0" aria-controls="example" aria-label="Name: activate to sort column ascending">Nombre</th>
+                      <th>Nombre</th>
                       <th>Formato</th>
                     </tr>
                   </thead>
@@ -165,10 +165,10 @@ $(document).ready(function () {
                 </table>
               </div>
               <div class="tab-pane fade" id="movilidad-tab-pane" role="tabpanel" aria-labelledby="movilidad-tab" tabindex="0">
-                <table data-order='[[ 3, "asc" ]]' id="example" class="display dataTable">
+                <table id="" class="display dataTable">
                   <thead>
                     <tr>
-                      <th class="sorting sorting_asc" tabindex="0" aria-controls="example" aria-label="Name: activate to sort column ascending">Nombre</th>
+                      <th>Nombre</th>
                       <th>Formato</th>
                     </tr>
                   </thead>
@@ -185,7 +185,7 @@ $(document).ready(function () {
                 </table>
               </div>
               <div class="tab-pane fade" id="becas-tab-pane" role="tabpanel" aria-labelledby="becas-tab" tabindex="0">
-                <table data-order='[[ 3, "asc" ]]' id="example" class="display dataTable">
+                <table id="" class="display dataTable">
                   <thead>
                     <tr>
                       <th class="sorting sorting_asc" tabindex="0" aria-controls="example" aria-label="Name: activate to sort column ascending">Nombre</th>

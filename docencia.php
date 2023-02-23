@@ -68,7 +68,7 @@ obj.style.display = (obj.style.display == 'block') ? 'none' : 'block';
                   <td>La Educación continua en el CEIICH</td>
                   <td><a href="https://www.ceiich.unam.mx/0/docs/formatos/La Educacion continua en el CEIICH.docx" target="_blank">Ver</a></td>
                 </tr>
-                <tr>
+                <tr class="odd">
                   <td>Proceso para inicio y término de servicio social</td>
                   <td><a href="https://www.ceiich.unam.mx/0/docs/formatos/Proceso para inicio y termino de servicio social.docx" target="_blank">Ver</a></td>
                 </tr>               

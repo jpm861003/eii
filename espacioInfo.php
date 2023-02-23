@@ -24,6 +24,7 @@ session_start();
         <!-- Estilos del sitio -->
         <link rel="stylesheet" href="./styles/styles.css">
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
@@ -38,18 +39,7 @@ function mostrar(enla , etik) {
   enla.innerHTML = (enla.innerHTML == '[-]') ? '[+]' : '[-]';
 }
 </script>
-<script type="text/javascript">
-$(document).ready(function () {
-    $('#tablaEII').DataTable({
-        lengthMenu: [
-            [10, 25, 50, -1],
-            [10, 25, 50, 'All'],
-        ],
-    });
-});
-</script>
-<script src="./js/buscador.js"></script>
-<script src="./js/paginacion.js"></script>
+<script src="/js/buscador.js"></script>
 
 <body>
   <div class="container-1">
@@ -101,20 +91,8 @@ $(document).ready(function () {
 
             <div class="tab-content" id="myTabContent">
               <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-                <div id="tablaEII_wrapper" class="dataTables_wrapper">
-                    <div class="row">
-                      <div class="col-sm-12 col-md-6">
-                     
-                      </div>
-                      <div class="col-sm-12 col-md-6">
-                        <div id="tablaEII" class="dataTables_filter" align="right">
-                          <label align="right">Buscar:<input  type="text" class="form-control col-md-3 light-table-filter" placeholder="" data-table="order-table"></label>
-                        </div>
-                      </div>
-                  </div>
-                </div>
-                <div id="paginador"></div>
-                <table name="tablaEII" id="tblDatos" class="order-table display dataTable">                
+               
+                <table id="" class="display">                
                   <thead>
                     <tr>
                       <th>Nombre</th>
@@ -1621,25 +1599,15 @@ $(document).ready(function () {
                       <th>Ver</th>
                     </tr>
                   </tfoot>
-                </table>
-                <script type="text/javascript">
-                  var p = new Paginador(
-                  document.getElementById('paginador'),
-                  document.getElementById('tblDatos'),
-                  10
-                  );
-                  p.Mostrar();
-                </script>
-
-                
+                </table>                
               </div>
 
               <div class="tab-pane fade" id="informes-tab-pane" role="tabpanel" aria-labelledby="informes-tab" tabindex="0">
-                <table data-order='[[ 3, "asc" ]]' id="example" class="display dataTable">
+                <table id="" class="table dataTable">
                   <thead>
                     <tr>
-                      <th class="sorting sorting_asc" tabindex="0" aria-controls="example" aria-label="Name: activate to sort column ascending">Nombre</th>
-                      <th class="sorting sorting_asc">Fecha</th>
+                      <th>Nombre</th>
+                      <th>Fecha</th>
                       <th>Ver</th>
                     </tr>
                   </thead>
@@ -1654,7 +1622,7 @@ $(document).ready(function () {
                       <td>2017-04-12</td>
                       <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/2. Informes aprobados 2017.pdf" target="_blank">Ver</a></td>
                     </tr>
-                    <tr>
+                    <tr class="odd">
                       <td>Informes aprobados 2018</td>
                       <td>2018-04-12</td>
                       <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/3. Informe aprobados 2018.pdf" target="_blank">Ver</a></td>
@@ -1664,7 +1632,7 @@ $(document).ready(function () {
                       <td>2019-04-21</td>
                       <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/4. Informe aprobados 2019.pdf" target="_blank">Ver</a></td>
                     </tr>
-                    <tr>
+                    <tr class="odd">
                       <td>Informes aprobados 2020</td>
                       <td>2020-04-26</td>
                       <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/5. Informe aprobados 2020.pdf" target="_blank">Ver</a></td>
@@ -1677,25 +1645,14 @@ $(document).ready(function () {
                   </tbody>
                 </table>
               </div>
+
               <div class="tab-pane fade" id="presupuesto-tab-pane" role="tabpanel" aria-labelledby="presupuesto-tab" tabindex="0">
-                <div id="example_wrapper" class="dataTables_wrapper">
-                    <div class="row">
-                      <div class="col-sm-12 col-md-6">
-                        
-                      </div>
-                      <div class="col-sm-12 col-md-6">
-                        <div id="tablaEII" class="dataTables_filter" align="right">
-                          <label align="right">Buscar:<input  type="text" class="form-control col-md-3 light-table-filter" placeholder="" data-table="order-table"></label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                <table data-order='[[ 3, "asc" ]]' id="example" class="order-table display dataTable">
+                <table id="" class="display dataTable">
                   <thead>
                     <tr>
-                      <th class="sorting sorting_asc" tabindex="0" aria-controls="example" aria-label="Name: activate to sort column ascending">Nombre</th>
-                      <th class="sorting sorting_asc" tabindex="0" aria-controls="example"aria-label="Name: activate to sort column ascending">Tipo</th>
-                      <th class="sorting sorting_asc">Fecha</th>
+                      <th>Nombre</th>
+                      <th>Tipo</th>
+                      <th>Fecha</th>
                       <th>Ver</th>
                     </tr>
                   </thead>
@@ -1784,19 +1741,16 @@ $(document).ready(function () {
                       <td>2021-03-16</td>
                       <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/RELACION DE PROF INVITADOS 2021-oct.pdf" target="_blank">Ver</a></td>
                     </tr>
-
-
                   </tbody>
                 </table>
-
-
               </div>
+
               <div class="tab-pane fade" id="oficiales-tab-pane" role="tabpanel" aria-labelledby="oficiales-tab" tabindex="0">
-                <table data-order='[[ 3, "asc" ]]' id="example" class="display dataTable">
+                <table id="" class="table dataTable">
                   <thead>
                     <tr>
-                      <th class="sorting sorting_asc" tabindex="0" aria-controls="example" aria-label="Name: activate to sort column ascending">Nombre</th>
-                      <th class="sorting sorting_asc">Fecha</th>
+                      <th>Nombre</th>
+                      <th>Fecha</th>
                       <th>Ver</th>
                     </tr>
                   </thead>
@@ -1810,12 +1764,12 @@ $(document).ready(function () {
                 </table>
               </div>
               <div class="tab-pane fade" id="audiovisual-tab-pane" role="tabpanel" aria-labelledby="audiovisual-tab" tabindex="0">
-                <table data-order='[[ 3, "asc" ]]' id="example" class="display dataTable">
+                <table id="" class="table dataTable">
                   <thead>
                     <tr>
-                      <th class="sorting sorting_asc" tabindex="0" aria-controls="example" aria-label="Name: activate to sort column ascending">Nombre</th>
-                      <th class="sorting sorting_asc" tabindex="0" aria-controls="example"aria-label="Name: activate to sort column ascending">Tipo</th>
-                      <th class="sorting sorting_asc">Fecha</th>
+                      <th>Nombre</th>
+                      <th>Tipo</th>
+                      <th>Fecha</th>
                       <th>Ver</th>
                     </tr>
                   </thead>
@@ -1843,46 +1797,31 @@ $(document).ready(function () {
               </div>
 
               <div class="tab-pane fade" id="editorial-tab-pane" role="tabpanel" aria-labelledby="editorial-tab" tabindex="0">
-                <table name="tablaEII" data-order='[[ 3, "asc" ]]' id="tablaEII" class="order-table display dataTable">
-
-                  
-                  <div id="example_wrapper" class="dataTables_wrapper">
-                    <div class="row">
-                      <div class="col-sm-12 col-md-6">
-                        
-                      </div>
-                      <div class="col-sm-12 col-md-6">
-                        <div id="tablaEII" class="dataTables_filter" align="right">
-                          <label align="right">Buscar:<input  type="text" class="form-control col-md-3 light-table-filter" placeholder="" data-table="order-table"></label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-              
+                <table id="" class="display">                               
                   <thead>
                     <tr>
-                      <th class="sorting sorting_asc" tabindex="0" aria-controls="tablaEII" aria-label="Name: activate to sort column ascending">Nombre</th>
-                      <th class="sorting sorting_asc" tabindex="0" aria-controls="tablaEII" aria-label="Name: activate to sort column ascending">Tipo</th>
-                      <th class="sorting sorting_asc">Fecha</th>
+                      <th>Nombre</th>
+                      <th>Tipo</th>
+                      <th>Fecha</th>
                       <th>Ver</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr class="odd">
-                      <td data-search="">Programa editorial, 2022</td>
-                      <td data-search="">Programa</td>
-                      <td data-order="">2022-03-29</td>
+                    <tr>
+                      <td>Programa editorial, 2022</td>
+                      <td>Programa</td>
+                      <td>2022-03-29</td>
                       <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/Programa editorial 2022_VF.pdf" target="_blank">Ver</a></td>
                     </tr>
-                    <tr class="even">
-                      <td data-search="">Lineamientos editoriales, 2021</td>
+                    <tr>
+                      <td>Lineamientos editoriales, 2021</td>
                       <td data-search="">Lineamientos</td>
                       <td data-order="">2021-04-12</td>
                       <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/LineamientosEditoriales2021.pdf" target="_blank">Ver</a></td>
                     </tr>
                     <tr>
                       <td>Guía de entrega de originales para publicación</td>
-                      <td class="sorting_1">Guía</td>
+                      <td>Guía</td>
                       <td>2020-04-12</td>
                       <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/GuiaEntregaOriginales.pdf" target="_blank">Ver</a></td>
                     </tr> 
@@ -2045,8 +1984,9 @@ $(document).ready(function () {
 ?>
 <script src="./js/main.js"></script>
 <script src="./js/libraries/Swiper/swiper.min.js"></script>
-<script src="./js/jquery-latest.js"></script>
+
 <script src="./js/menuResponsive.js"></script>
 
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </html>
