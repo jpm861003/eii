@@ -39,7 +39,7 @@ function mostrar(enla , etik) {
   enla.innerHTML = (enla.innerHTML == '[-]') ? '[+]' : '[-]';
 }
 </script>
-<script src="/js/buscador.js"></script>
+<script src="./js/buscador.js"></script>
 
 <body>
   <div class="container-1">
