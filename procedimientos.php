@@ -96,22 +96,22 @@ $(document).ready(function () {
                     <tr class="odd">
                       <td>Mayor a tres días</td>
                       <td>Comisión</td>
-                      <td><a href="https://www.ceiich.unam.mx/0/docs/formatos/4. Comision. Mayores a tres dias.docx" target="_blank">Descargar</a></td>
+                      <td><a href="http://132.248.246.131/eii/docsInfo/form/4. Comision. Mayores a tres dias.docx" target="_blank">Descargar</a></td>
                     </tr>
                     <tr>
                       <td>Permiso de ausencia corta</td>
                       <td>Comisión</td>
-                      <td><a href="https://www.ceiich.unam.mx/0/docs/formatos/COMISIONES ACADEMICAS-Permisos de ausencias cortas.pdf" target="_blank">Descargar</a></td>
+                      <td><a href="http://132.248.246.131/eii/docsInfo/form/COMISIONES ACADEMICAS-Permisos de ausencias cortas.pdf" target="_blank">Ver</a></td>
                     </tr>
                     <tr class="odd">
                       <td>Con goce de sueldo</td>
                       <td>Licencia</td>
-                      <td><a href="https://www.ceiich.unam.mx/0/docs/formatos/LICENCIAS ACADEMICAS-Con goce de sueldo.pdf" target="_blank">Descargar</a></td>
+                      <td><a href="http://132.248.246.131/eii/docsInfo/form/LICENCIAS ACADEMICAS-Con goce de sueldo.pdf" target="_blank">Ver</a></td>
                     </tr> 
                     <tr>
                       <td>Sin goce de sueldo</td>
                       <td>Licencia</td>
-                      <td><a href="https://www.ceiich.unam.mx/0/docs/formatos/LICENCIAS ACADEMICAS-Sin goce de sueldo.pdf" target="_blank">Descargar</a></td>
+                      <td><a href="http://132.248.246.131/eii/docsInfo/form/LICENCIAS ACADEMICAS-Sin goce de sueldo.pdf" target="_blank">Ver</a></td>
                     </tr>
                   </tbody>
                 </table>
@@ -127,19 +127,19 @@ $(document).ready(function () {
                   <tbody>
                     <tr class="odd">
                       <td>Disfrute de sabático</td>
-                      <td><a href="https://www.ceiich.unam.mx/0/docs/formatos/5. Disfrute de Sabatico.docx" target="_blank">Descargar</a></td>
+                      <td><a href="http://132.248.246.131/eii/docsInfo/form/5. Disfrute de Sabatico.docx" target="_blank">Descargar</a></td>
                     </tr>
                     <tr class="even">
                       <td>Regularización de diferimiento de sabático</td>
-                      <td><a href="https://www.ceiich.unam.mx/0/docs/formatos/5.1 Diferimiento de Sabatico (Ya paso fecha de inicio).docx" target="_blank">Descargar</a></td>
+                      <td><a href="http://132.248.246.131/eii/docsInfo/form/5.1 Diferimiento de Sabatico (Ya paso fecha de inicio).docx" target="_blank">Descargar</a></td>
                     </tr>
                     <tr class="odd">
                       <td>Diferimiento de Sabático</td>
-                      <td><a href="https://www.ceiich.unam.mx/0/docs/formatos/5.2 Diferimiento de Sabatico (No ha iniciado).docx" target="_blank">Descargar</a></td>
+                      <td><a href="http://132.248.246.131/eii/docsInfo/form/5.2 Diferimiento de Sabatico (No ha iniciado).docx" target="_blank">Descargar</a></td>
                     </tr> 
                     <tr>
                       <td>Informe de Sabático</td>
-                      <td><a href="https://www.ceiich.unam.mx/0/docs/formatos/Informe sabatico.docx" target="_blank">Descargar</a></td>
+                      <td><a href="http://132.248.246.131/eii/docsInfo/form/Informe sabatico.docx" target="_blank">Descargar</a></td>
                     </tr>
                   </tbody>
                 </table>
@@ -155,11 +155,11 @@ $(document).ready(function () {
                   <tbody>
                     <tr class="odd">
                       <td>Carta de promoción y definitividad</td>
-                      <td><a href="https://www.ceiich.unam.mx/0/docs/formatos/6. Carta de promocion y definitividad.docx" target="_blank">Descargar</a></td>
+                      <td><a href="http://132.248.246.131/eii/docsInfo/form/6. Carta de promocion y definitividad.docx" target="_blank">Descargar</a></td>
                     </tr>
                     <tr class="even">
                       <td>Cambio de adscripción temporal</td>
-                      <td><a href="https://www.ceiich.unam.mx/0/docs/formatos/7. Cambio de Adscripcion Temporal.docx" target="_blank">Descargar</a></td>
+                      <td><a href="http://132.248.246.131/eii/docsInfo/form/7. Cambio de Adscripcion Temporal.docx" target="_blank">Descargar</a></td>
                     </tr>                  
                   </tbody>
                 </table>
@@ -175,11 +175,11 @@ $(document).ready(function () {
                   <tbody>
                     <tr class="odd">
                       <td>Estancias de Investigación</td>
-                      <td><a href="https://www.ceiich.unam.mx/0/docs/formatos/9. Estancias de Investigacion.docx" target="_blank">Descargar</a></td>
+                      <td><a href="http://132.248.246.131/eii/docsInfo/form/9. Estancias de Investigacion.docx" target="_blank">Descargar</a></td>
                     </tr>
                     <tr class="even">
                       <td>Gastos de intercambio</td>
-                      <td><a href="https://www.ceiich.unam.mx/0/docs/formatos/10. Gastos de intercambio.docx" target="_blank">Descargar</a></td>
+                      <td><a href="http://132.248.246.131/eii/docsInfo/form/10. Gastos de intercambio.docx" target="_blank">Descargar</a></td>
                     </tr>                  
                   </tbody>
                 </table>
@@ -188,18 +188,18 @@ $(document).ready(function () {
                 <table id="" class="display dataTable">
                   <thead>
                     <tr>
-                      <th class="sorting sorting_asc" tabindex="0" aria-controls="example" aria-label="Name: activate to sort column ascending">Nombre</th>
+                      <th>Nombre</th>
                       <th>Formato</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr class="odd">
                       <td>Carta compromiso</td>
-                      <td><a href="https://www.ceiich.unam.mx/0/docs/formatos/8. Becas CEIICH. Carta compromiso.docx" target="_blank">Descargar</a></td>
+                      <td><a href="http://132.248.246.131/eii/docsInfo/form/8. Becas CEIICH. Carta compromiso.docx" target="_blank">Descargar</a></td>
                     </tr>
                     <tr class="even">
                       <td>Formato de solicitud de becas</td>
-                      <td><a href="https://www.ceiich.unam.mx/0/docs/formatos/8.1 Becas CEIICH. Formato de Solicitud Becas.docx" target="_blank">Descargar</a></td>
+                      <td><a href="http://132.248.246.131/eii/docsInfo/form/8.1 Becas CEIICH. Formato de Solicitud Becas.docx" target="_blank">Descargar</a></td>
                     </tr>                  
                   </tbody>
                 </table>

@@ -62,15 +62,15 @@ obj.style.display = (obj.style.display == 'block') ? 'none' : 'block';
               <tbody>
                 <tr class="odd">
                   <td>Convenios y Bases de Colaboración de Docencia y Educación Continua</td>
-                  <td><a href="https://www.ceiich.unam.mx/0/docs/formatos/Convenios y Bases de Colaboracion de Docencia y Educacion Continua.docx" target="_blank">Ver</a></td>
+                  <td><a href="http://132.248.246.131/eii/docsInfo/form/Convenios y Bases de Colaboracion de Docencia y Educacion Continua.docx" target="_blank">Ver</a></td>
                 </tr>
                 <tr class="even">
                   <td>La Educación continua en el CEIICH</td>
-                  <td><a href="https://www.ceiich.unam.mx/0/docs/formatos/La Educacion continua en el CEIICH.docx" target="_blank">Ver</a></td>
+                  <td><a href="http://132.248.246.131/eii/docsInfo/form/La Educacion continua en el CEIICH.docx" target="_blank">Ver</a></td>
                 </tr>
                 <tr class="odd">
                   <td>Proceso para inicio y término de servicio social</td>
-                  <td><a href="https://www.ceiich.unam.mx/0/docs/formatos/Proceso para inicio y termino de servicio social.docx" target="_blank">Ver</a></td>
+                  <td><a href="http://132.248.246.131/eii/docsInfo/form/Proceso para inicio y termino de servicio social.docx" target="_blank">Ver</a></td>
                 </tr>               
               </tbody>
             </table>                        
