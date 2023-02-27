@@ -107,19 +107,19 @@ function mostrar(enla , etik) {
                       <td>Calendario de sesiones, 2022</td>
                       <td>Calendario</td>
                       <td>2022-01-07</td>
-                      <td><a href="http://132.248.246.131/eii/espacioInfo/CalendarioDeSesionesCI2022.pdf" target="_blank">Ver</a></td>
+                      <td><a href="http://132.248.246.131/eii/docsInfo/CalendarioDeSesionesCI2022.pdf" target="_blank">Ver</a></td>
                     </tr>
                     <tr class="odd">
                       <td data-search="Acta del 29 de marzo">Acta del 29 de marzo</td>
                       <td data-search="Ordinaria">Ordinaria</td>
                       <td data-order="20160329">2016-03-29</td>
-                      <td><a href="https://drive.google.com/file/d/1fUiw7Cr_p5xvmn29xatxb50GPJUjnHmc/view?usp=sharing" target="_blank">Ver</a></td>
+                      <td><a href="http://132.248.246.131/eii/docsInfo/9. 29 de marzo.pdf" target="_blank">Ver</a></td>
                     </tr>
                     <tr class="even">
                       <td data-search="Acta del 12 de abril">Acta del 12 de abril</td>
                       <td data-search="Ordinaria">Ordinaria</td>
                       <td data-order="20160412">2016-04-12</td>
-                      <td><a href="https://drive.google.com/file/d/1FOsVrAt6vqMB7JdKi3fW7pBuAkxbB9Vq/view?usp=sharing" target="_blank">Ver</a></td>
+                      <td><a href="http://132.248.246.131/eii/docsInfo/10. 12 de abril.pdf" target="_blank">Ver</a></td>
                     </tr>
                     <tr>
                       <td>Acta del 12 de abril</td>
@@ -146,13 +146,13 @@ function mostrar(enla , etik) {
                       <td><a href="http://132.248.246.131/eii/docsInfo/14. 2 de mayo.pdf" target="_blank">Ver</a></td>
                     </tr>
                     <tr>
-                      <td>Acta del 2 de mayo (Tema)</td>
+                      <td>Acta del 2 de mayo, becas posdoctorales</td>
                       <td>Complementaria</td>
                       <td>2016-05-02</td>
                       <td><a href="http://132.248.246.131/eii/docsInfo/15. 2 de mayo complementaria.pdf" target="_blank">Ver</a></td>
                     </tr>
                     <tr>
-                      <td>Acta del 2 de mayo (Tema)</td>
+                      <td>Acta del 2 de mayo, cambio de adscripción</td>
                       <td>Complementaria</td>
                       <td>2016-05-02</td>
                       <td><a href="http://132.248.246.131/eii/docsInfo/16. 2 de mayo complementaria.pdf" target="_blank">Ver</a></td>
@@ -1295,7 +1295,7 @@ function mostrar(enla , etik) {
                       <td>Acta del 23 de febrero, estímulos</td>
                       <td>Complementaria</td>
                       <td>2022-02-23</td>
-                      <td><a href="http://132.248.246.131/eii/docsInfo/11. Complementaria. 23 Febrero. Estímulos_CF.pdf" target="_blank">Ver</a></td>
+                      <td><a href="http://132.248.246.131/eii/docsInfo/11_Complementaria23FebreroEstímulos_CF.pdf" target="_blank">Ver</a></td>
                     </tr>
                     <tr>
                       <td>Acta del 10 de marzo</td>
@@ -1523,13 +1523,13 @@ function mostrar(enla , etik) {
                       <td>Acta del 12 de octubre, promoción Dr. Juárez</td>
                       <td>Complementaria</td>
                       <td>2022-10-12</td>
-                      <td><a href="http://132.248.246.131/eii/docsInfo/49. Complementaria. Promoción Dr. Julio Juárez_CF.pdf" target="_blank">Ver</a></td>
+                      <td><a href="http://132.248.246.131/eii/docsInfo/49_ComplementariaPromociónDrJulioJuárez_CF.pdf" target="_blank">Ver</a></td>
                     </tr>
                     <tr>
                       <td>Acta del 12 de octubre, promoción Dra. Maass</td>
                       <td>Complementaria</td>
                       <td>2022-10-12</td>
-                      <td><a href="http://132.248.246.131/eii/docsInfo/50. Complementaria. Promoción Dra. Margarita Maass_CF.pdf" target="_blank">Ver</a></td>
+                      <td><a href="http://132.248.246.131/eii/docsInfo/50_ComplementariaPromociónDraMargaritaMaass_CF.pdf" target="_blank">Ver</a></td>
                     </tr>
                     <tr>
                       <td>Acta del 26 de octubre</td>
@@ -1547,13 +1547,13 @@ function mostrar(enla , etik) {
                       <td>Acta del 26 de octubre, modificación reglamento CEC</td>
                       <td>Complementaria</td>
                       <td>2022-10-26</td>
-                      <td><a href="http://132.248.246.131/eii/docsInfo/53. Complementaria. 26 Octubre_CF" target="_blank">Ver</a></td>
+                      <td><a href="http://132.248.246.131/eii/docsInfo/53_Complementaria26Octubre_CF" target="_blank">Ver</a></td>
                     </tr>
                     <tr>
                       <td>Acta del 26 de octubre, becas posdoctorales</td>
                       <td>Complementaria</td>
                       <td>2022-10-26</td>
-                      <td><a href="http://132.248.246.131/eii/docsInfo/54. Complementaria. 26 Octubre BP_CF" target="_blank">Ver</a></td>
+                      <td><a href="http://132.248.246.131/eii/docsInfo/54_Complementaria26OctubreBP_CF" target="_blank">Ver</a></td>
                     </tr>
                     <tr>
                       <td>Acta del 9 de noviembre</td>
