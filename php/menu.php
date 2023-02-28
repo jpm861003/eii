@@ -3,11 +3,7 @@
 <div class="menu">
 <nav class="navbar-bar">
      
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="menu">
-                <li class="nav-item">
-                    <a href="./homeEII.php"><i class="fas fa-home"></i></a>
-                </li>
-            
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="menu">            
                 <li class="nav-item"><a href="./espacioInfo.php">Espacio Informativo</a>
                 </li>
             

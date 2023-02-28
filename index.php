@@ -117,7 +117,7 @@ OR $contrasena == 'An5fgC51'
        $_SESSION['sesionValida'] = 'uno123';  
        
         session_write_close();
-        header ("Location: ./homeEII.php");              
+        header ("Location: ./espacioInfo.php");              
         exit;       
     } else {
         $mensaje= "Contraseña inv&aacute;lida";

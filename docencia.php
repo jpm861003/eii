@@ -56,21 +56,21 @@ obj.style.display = (obj.style.display == 'block') ? 'none' : 'block';
               <thead>
                 <tr>
                   <th class="sorting sorting_asc" tabindex="0" aria-controls="example" aria-label="Name: activate to sort column ascending">Nombre</th>
-                  <th>Ver</th>
+                  <th>Descargar</th>
                 </tr>
               </thead>
               <tbody>
                 <tr class="odd">
                   <td>Convenios y Bases de Colaboración de Docencia y Educación Continua</td>
-                  <td><a href="http://132.248.246.131/eii/docsInfo/form/Convenios y Bases de Colaboracion de Docencia y Educacion Continua.docx" target="_blank">Ver</a></td>
+                  <td><a href="http://132.248.246.131/eii/docsInfo/formatos/Convenios y Bases de Colaboracion de Docencia y Educacion Continua.docx" target="_blank">Descargar</a></td>
                 </tr>
                 <tr class="even">
                   <td>La Educación continua en el CEIICH</td>
-                  <td><a href="http://132.248.246.131/eii/docsInfo/form/La Educacion continua en el CEIICH.docx" target="_blank">Ver</a></td>
+                  <td><a href="http://132.248.246.131/eii/docsInfo/formatos/La Educacion continua en el CEIICH.docx" target="_blank">Descargar</a></td>
                 </tr>
                 <tr class="odd">
                   <td>Proceso para inicio y término de servicio social</td>
-                  <td><a href="http://132.248.246.131/eii/docsInfo/form/Proceso para inicio y termino de servicio social.docx" target="_blank">Ver</a></td>
+                  <td><a href="http://132.248.246.131/eii/docsInfo/formatos/Proceso para inicio y termino de servicio social.docx" target="_blank">Descargar</a></td>
                 </tr>               
               </tbody>
             </table>                        
